@@ -16,7 +16,6 @@ def pig_latin():
         pig_word = second + first + pig
         print ("Pig Latin: " + pig_word)
         
-        time.sleep (1)
         def pig_latin2():
             new_word = input("Would you like to enter another word (Y/N)? ")
 
