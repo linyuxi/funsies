@@ -8,9 +8,6 @@ print ("This is a simple Pig Latin word converter.")
 
 def pig_latin():
     original = input("Enter a word: ")
-    print ("Please wait ...")
-    import time 
-    time.sleep (2)
 
     if original.isalpha() and len(original) > 0:
         first = original[0]
