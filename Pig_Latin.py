@@ -20,10 +20,10 @@ def pig_latin():
         def pig_latin2():
             new_word = input("Would you like to enter another word (Y/N)? ")
 
-            if new_word == "Y" or new_word == "y":
+            if new_word.lower() == "y":
                 return pig_latin()
 
-            elif new_word == "N" or new_word == "n":
+            elif new_word.lower() == "n":
                 print ("Thanks for participating!")
 
             else:
