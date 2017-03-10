@@ -9,10 +9,23 @@ print ("This is a simple Pig Latin word converter.")
 def pig_latin():
     original = input("Enter a word: ")
 
+    two_consonant_cluster= ['th', 'ph', 'pr', 'pl', 'st', 'sh','sr','tr','ch','pt']
+    three_consonant_cluster= ['thl','thr','phl','pth','str','stl','sch','shr','shl']
+    four_consonant_cluster= ['pthl','schr','schl','shch']
+    #single syllable vowel cluster
+    two_vowel_cluster = ['ae','ao','au','ai','ay','ea','ei','ey','eo','eu','ee','ie','oo','oe','oi','ou','ue','ui'] 
+
     if original.isalpha() and len(original) > 0:
-        first = original[0]
+        if original[0:4] in four_consonant_cluster:
+            first = original[0:4]
+        elif original[0:3] in three_consonant_cluster:
+            first = original[0:3]
+        elif original[0:2] in two_consonant_cluster:
+            first = original[0:2]
+        else:
+            first = original[0]
         pig = 'ay'
-        second = original[1:len(original)]
+        second = original[len(first):len(original)]
         pig_word = second + first + pig
         print ("Pig Latin: " + pig_word)
         
