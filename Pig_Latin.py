@@ -11,7 +11,7 @@ def pig_latin():
 
     two_consonant_cluster= ['th', 'ph', 'pr', 'pl', 'st', 'sh','sr','tr','ch','pt']
     three_consonant_cluster= ['thl','thr','phl','pth','str','stl','sch','shr','shl']
-    four_consonant_cluster= ['pthl','schr','schl','shch']
+    four_consonant_cluster= ['phth','schr','schl','shch']
     #single syllable vowel cluster
     two_vowel_cluster = ['ae','ao','au','ai','ay','ea','ei','ey','eo','eu','ee','ie','oo','oe','oi','ou','ue','ui'] 
 
