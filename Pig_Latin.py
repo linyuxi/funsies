@@ -14,13 +14,14 @@ def pig_latin():
     four_consonant_cluster= ['phth','schr','schl','shch']
     #single syllable vowel cluster
     two_vowel_cluster = ['ae','ao','au','ai','ay','ea','ei','ey','eo','eu','ee','ie','oo','oe','oi','ou','ue','ui'] 
+    three_vowel_cluster = ['eye','eau','aou'] #this is why coming up with a rule to just check for clusters would be so much easier
 
     if original.isalpha() and len(original) > 0:
         if original[0:4] in four_consonant_cluster:
             first = original[0:4]
-        elif original[0:3] in three_consonant_cluster:
+        elif original[0:3] in three_consonant_cluster or three_vowel_cluster:
             first = original[0:3]
-        elif original[0:2] in two_consonant_cluster:
+        elif original[0:2] in two_consonant_cluster or two_vowel_cluster:
             first = original[0:2]
         else:
             first = original[0]
